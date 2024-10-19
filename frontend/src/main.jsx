@@ -5,6 +5,7 @@ import{Login} from './components/Login.jsx'
 import {Register} from './components/Register.jsx'
 import {Home} from './components/Home.jsx'
 import {RootPage} from './components/RootPage.jsx'
+import {About} from './components/About.jsx'
 import './index.css'
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 createRoot(document.getElementById('root')).render(
@@ -13,8 +14,9 @@ createRoot(document.getElementById('root')).render(
       <Route path='/' element={<RootPage/>}></Route>
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/register'element={<Register/>}></Route>
-      <Route path='/login/home'element={<Home/>}></Route>
-      <Route path='/register/home'element={<Home/>}></Route>
+      <Route path='/signup'element={<Register/>}></Route>
+      <Route path='/signin'element={<Login/>}></Route>
+      <Route path='/about'element={<About/>}></Route>
    </Routes>
    </BrowserRouter>
 )
