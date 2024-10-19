@@ -30,11 +30,11 @@ export const Navbar = () => {
             <Link to="/about" onClick={handleSidebar}>
               <div className='w-full bg-slate-400 p-3'><p>About us</p></div>
             </Link>
-            <Link to="/signin" onClick={handleSidebar}>
-              <div className='w-full bg-slate-400 p-3'><p>SignUp</p></div>
+            <Link to="/login" onClick={handleSidebar}>
+              <div className='w-full bg-slate-400 p-3'><p>Login</p></div>
             </Link>
-            <Link to="/signup" onClick={handleSidebar}>
-              <div className='w-full bg-slate-400 p-3'><p>SignIn</p></div>
+            <Link to="/register" onClick={handleSidebar}>
+              <div className='w-full bg-slate-400 p-3'><p>Register</p></div>
             </Link>
           </div>
           <div className='absolute bottom-0 w-full text-center p-4'>
@@ -52,8 +52,8 @@ export const Navbar = () => {
         <div className='hidden lg:flex space-x-4 items-center'>
           <Link to="/" className="hover:underline"><p>Home</p></Link>
           <Link to="/about" className="hover:underline"><p>About us</p></Link>
-          <Link to="/signup" className="hover:underline"><p>SignUp</p></Link>
-          <Link to="/signin" className="hover:underline"><p>SignIn</p></Link>
+          <Link to="/login" className="hover:underline"><p>SignUp</p></Link>
+          <Link to="/register" className="hover:underline"><p>SignIn</p></Link>
           <User2 />
         </div>
       </div>
