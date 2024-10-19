@@ -19,7 +19,7 @@ export const Register = () => {
        <input type="text" className='p-3 m-3 rounded-lg border-2 border-black' placeholder='Password'/>
        <input type="text" className='p-3 m-3 rounded-lg border-2 border-black' placeholder='Password'/>
        <div className='flex  w-[100%] pl-2'><Link to="/login"><p>existing user?</p></Link></div>
-       <Link to='home'><button className='border-2 rounded-lg p-2 m-2 bg-blue-800 text-white'> LOGIN</button></Link>
+       <Link to='/home'><button className='border-2 rounded-lg p-2 m-2 bg-blue-800 text-white'>REGISTER</button></Link>
      </div>
     </div>
  </>
