@@ -6,8 +6,7 @@ import { useRef,useState } from 'react'
 import {Navigate} from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-export const Login = () => {
-
+export const Login = () =>{
   const [Redirecttohome,setRedirecttohome]=useState(false);
   const emailref=useRef(null);
   const passwordref=useRef(null);
@@ -34,7 +33,7 @@ export const Login = () => {
      await axios.post("http://localhost:1998/api/v1/login",objdata).then((response)=>{
        const toastfy=(message)=>toast.success(message)
        setTimeout(()=>setRedirecttohome(true),2000);
-      //  sessionStorage.setItem("id",res.data.others._id);
+         //sessionStorage.setItem("id",res.data.others._id);
          toastfy(response.data.message);
      })
    }
@@ -49,7 +48,7 @@ export const Login = () => {
   }
   if(Redirecttohome)
     {
-      return <Navigate to={"/Home"}/>
+      return <Navigate to={"/home"}/>
     }
   return (
     <>
@@ -59,7 +58,7 @@ export const Login = () => {
         <div className='h-auto  rounded-lg flex flex-col justify-center items-center  border-2 border-black shadow-xl shadow-green-400 z-20 p-3 '>
           <p>LOGIN</p>
           <input type="text" className='p-3 m-3 rounded-lg border-2 border-black ' placeholder='Email' ref={emailref}/>
-          <input type="text" className='p-3 m-3 rounded-lg border-2 border-black' placeholder='Password' ref={passwordref}/>
+          <input type="text" className='p-3 m-3 rounded-lg border-2 border-black ' placeholder='Password' ref={passwordref}/>
           <div className='flex  w-[100%] pl-2'><Link to="/register"><p>new user?</p></Link></div>
            <button className='border-2 rounded-lg p-2 m-2 bg-blue-800 text-white' onClick={handleLogin}> LOGIN</button>
         </div>

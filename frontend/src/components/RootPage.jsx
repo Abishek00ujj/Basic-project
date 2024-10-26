@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import blood2 from '../assets/img/blood2.png';
 
-export const RootPage = () => {
+export const RootPage=()=> 
+  {
   return (
     <>
       <div>
@@ -27,7 +28,9 @@ export const RootPage = () => {
               </Link>
             </div>
           </div>
+          <div>EMERGENCY</div>
         </div>
+       <div className='w-full justify-center flex'><Link to="/newspage"><button className='bg-black p-5 text-white rounded-3xl'>Live News</button></Link></div> 
       </div>
     </>
   );
